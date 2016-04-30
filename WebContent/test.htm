@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Bootstrap 101 Template</title>
+  <!-- Meta data -->
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <style type="text/css">
+    html, body{
+      height: 100%;
+      background: linear-gradient(60deg, rgba(0,0,0,0.1), rgba(0,0,220,0.1),rgba(0,0,220,0.3));
+    }
+    .div1{
+      /*width: 800px;*/
+      height: 400px;
+      width: 60%;
+      border: 3px solid rgba(0,0,0,0.2);
+      border-radius: 4px; 
+      margin: 20px auto;
+    }
+    .div2{
+      /*background: red;*/
+      border-right: 3px solid rgba(0,0,0,0.2);
+      padding: 10px;
+      height: 100%;
+      max-height: 100%;
+
+    }
+    .div3{
+      /*background: blue;*/
+      /*height: 100%;*/
+      padding: 10px;
+      height: 100%;
+      max-height: 100%;
+
+    }
+    .fixedImg{
+      width: 100%;
+      height : 100%;
+      max-height: 100%;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="div1">
+      <div class="div2 col-sm-4 col-xs-6">
+        <img src="img/pistachio.jpg" class="fixedImg">
+      </div>
+
+      <div class="div3 col-sm-8 col-xs-6">
+
+        <form action="" method="POST" role="form">
+          <legend>All for the Liberation</legend>
+
+          <div class="form-group">
+            <label for="">label</label>
+            <input type="text" class="form-control" id="" placeholder="Input field">
+          </div>
+
+
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      &nbsp;
+    </div>  
+  </div>
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
