@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet Filter implementation class ImageFilter
  */
 @WebFilter(urlPatterns = { "*.png", "*.jpg", "*.gif" }, initParams = {
-		@WebInitParam(name = "notFoundImage", value = "/images/image-not-found.png") })
+		@WebInitParam(name = "notFoundImage", value = "/img/img-not-found.png") })
 public class ImageFilter implements Filter {
 	private String notFoundImage;
 
