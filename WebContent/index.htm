@@ -1,49 +1,177 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Liberty 2016 standard page</title>
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Pistachio</title>
   <!-- Meta data -->
 
+  <!-- Bootstrap -->
   <link href="css/font-awesome.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"> -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <style type="text/css">
+    html, body{
+      height: 100%;
+      background: linear-gradient(60deg, rgba(0,0,0,0.1), rgba(0,0,220,0.1),rgba(0,0,220,0.3));
+    }
+    .div1{
+      /*width: 800px;*/
+      height: 400px;
+      width: 60%;
+      border: 3px solid rgba(0,0,0,0.2);
+      border-radius: 4px; 
+      margin: 20px auto;
+    }
+    .div1::after{
+      content: " ";
+    }
+    .div2{
+      /*background: red;*/
+      border-right: 3px solid rgba(0,0,0,0.2);
+      padding: 10px;
+      height: 100%;
+      max-height: 100%;
+
+    }
+    .div3{
+      /*background: blue;*/
+      /*height: 100%;*/
+      padding: 10px;
+      height: 100%;
+      max-height: 100%;
+
+    }
+    .fixedImg{
+      width: 100%;
+      height : 100%;
+      max-height: 100%;
+      max-width: 100%;
+    }
+    .modal-70{
+      width: 70%;
+      max-width: 70%;
+      margin: auto;
+    }
+    .modal-40{
+      width: 40%;
+      max-width: 40%;
+      margin: auto;
+    }
   </style>
 </head>
 <body>
-
   <div class="container-fluid">
-  </br>
-  <a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Trigger modal</a>
-  <div class="modal fade" id="modal-id">
+    <div class="row div1">
+      <div class="div2 col-sm-4 col-xs-6">
+        <img src="img/pistachio.jpg" class="img-responsive" alt="Image">
+        <!-- <img src="pistachio.jpg" class="fixedImg"> -->
+      </div>
+
+      <div class="div3 col-sm-8 col-xs-6">
+        <legend><span class="fa fa-star fa-2x"></span> All for the Liberation  </legend>
+        <form class="form-horizontal" role="form" action="welcome">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-10"> 
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </div>
+          </div>
+          <div class="form-group"> 
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group"> 
+            <div class="col-sm-offset-2 col-sm-10">
+              <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+              <input type="submit" value="Submit" class="btn btn-default">
+              <a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Trigger modal</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>  
+  </div>
+
+  <div class="modal fade modal-70" id="modal-id">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Modal title</h4>
+          <h4 class="modal-title">Do you love Pistachio?</h4>
         </div>
         <div class="modal-body">
-          
+          <div class="row">
+            <div class="col-xs-4">
+              <img src="img/pistachio3.jpg" class="img-responsive" alt="Image">
+            </div>            
+            <div class="col-xs-8">
+              <label class="control-label">
+                She is the only one who gave you a chance and always treats you well.
+              </label>              
+            </div>          
+          </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button"  class="btn btn-default" data-target="#stupid" data-toggle="modal">Not sure</button>
+          <button onclick="function1()" type="button" class="btn btn-primary" data-dismiss="modal">Yes I do !</button>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="modal fade modal-70" id="stupid">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Stupid ! How can you not sure about that ??</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-xs-6">
+              <img src="img/pistachio.jpg" class="img-responsive" alt="Image">   
+            </div>
+            <div class="col-xs-6">
+              <strong>No, you do love her ! Fight for that! </strong>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="closeModal()" class="btn btn-default" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/bootbox.min.js"></script>
-
   <script type="text/javascript">
-    $(document).ready(function(){
+    function function1(){
+      bootbox.alert({ 
+        size: 'small',
+        message: "<strong>Of course you do!</strong>", 
+      callback: function(){ /* your callback code */ }
+    })
+    }
+    function closeModal(){
+     $("#modal-id").modal("hide");
+   }  
+ </script>
 
-    });
-  </script>
+ <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="js/jquery.min.js"></script>
+ <!-- Include all compiled plugins (below), or include individual files as needed -->
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/bootbox.min.js"></script>
 </body>
 </html>

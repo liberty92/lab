@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>JQUERY</title>
+  <!-- Meta data -->
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    html, body{
+      /*background: linear-gradient(60deg, rgba(0,0,0,0.1), rgba(0,0,220,0.1),rgba(0,0,220,0.3));*/
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+
+
+
+    <p>If you click on me, I will disappear.</p>
+    <p>Click me away!</p>
+    <p>Click me too!</p>
+
+    <div class="row">
+      <div class="col-xs-4">
+        <img src="img/pistachio.jpg" onclick="function1()" id="id1" class="img-responsive" alt="Image">
+      </div>
+      <div class="col-xs-4">
+        <img src="img/pistachio2.jpg" class="img-responsive" alt="Image">
+      </div>
+      <div class="col-xs-4">
+        <img src="img/pistachio3.jpg" class="img-responsive" alt="Image">
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootbox.min.js"></script>
+  <!-- In-page script -->
+  <script>
+    $(document).ready(function(){
+      $("p").click(function(){
+        $(this).hide();
+      });
+
+      // $("img").click(function(){
+        // $(this).hide();
+      // });
+    });
+
+    function function1(){
+      document.getElementsByTagName("img")[1].src="img/pistachio.jpg";
+
+      var x = document.getElementById("id1");
+      x.src = "img/pistachio3.jpg";
+    }
+
+  </script>
+</body>
+</html>
