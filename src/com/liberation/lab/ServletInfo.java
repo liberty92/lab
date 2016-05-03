@@ -37,7 +37,9 @@ public class ServletInfo extends HttpServlet {
 		// ").append(request.getContextPath());
 		ServletOutputStream out = response.getOutputStream();
 
-		out.println("<style> span {color:blue;} </style>");
+		response.setContentType("text/html");
+
+		out.println("<html><head><style> span {color:blue;} </style></head><body>");
 
 		String requestURL = request.getRequestURL().toString();
 		out.println("<br><span>requestURL:</span>");
@@ -114,6 +116,9 @@ public class ServletInfo extends HttpServlet {
 		out.println("<br><span>realPath:</span>");
 		String realPath = servletContext.getRealPath("");
 		out.println(realPath);
+		
+
+		out.println("</body></html>");
 	}
 
 	/**

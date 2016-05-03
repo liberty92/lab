@@ -16,8 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet Filter implementation class ImageFilter
  */
-@WebFilter(urlPatterns = { "*.png", "*.jpg", "*.gif" }, initParams = {
-		@WebInitParam(name = "notFoundImage", value = "/img/img-not-found.png") })
+// @WebFilter(urlPatterns = { "*.png", "*.jpg", "*.gif" }, initParams = {
+// @WebInitParam(name = "notFoundImage", value = "/img/notFound.jpg") })
 public class ImageFilter implements Filter {
 	private String notFoundImage;
 
@@ -72,11 +72,10 @@ public class ImageFilter implements Filter {
 
 			// ==> /ServletFilterTutorial + /images/image-not-found.png
 			resp.sendRedirect(req.getContextPath() + this.notFoundImage);
-
+			// System.out.println("DEFAULT PATH : " + req.getContextPath() +
+			// this.notFoundImage);
 		}
 
-		// pass the request along the filter chain
-		chain.doFilter(request, response);
 	}
 
 	/**
