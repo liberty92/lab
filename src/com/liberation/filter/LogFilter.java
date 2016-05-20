@@ -58,7 +58,7 @@ public class LogFilter implements Filter {
 //		CANT USE WITH WAR FILE ------- OK NOW FUCK THIS SHIT HAHAHAHA
 		PrintWriter pw = null;
 		try {
-			File file = new File(request.getServletContext().getRealPath("log.txt"));
+			File file = new File(req.getSession().getServletContext().getRealPath("log.txt"));
 			FileWriter fw = new FileWriter(file, true);
 			pw = new PrintWriter(fw);
 			pw.println(log);
